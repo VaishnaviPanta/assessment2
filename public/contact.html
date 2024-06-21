@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Form</title>
+<style>
+  h2 {
+  display:block;
+  color: aqua;
+  
+}
+</style>
+</head>
+<body>
+  <center>
+  <h2>Contact Us</h2>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="phone">Phone number:</label>
+    <input type="text" id="phone" name="phone" required><br><br>
+    
+    <label for="team">Team Name:</label>
+    <select id="team" name="team" required>
+      <option value="">Select Team</option>
+      <option value="team1">INDIA</option>
+      <option value="team2">PAKISTAN</option>
+      <option value="team3">CANADA</option>
+      <!-- Add more teams as needed -->
+    </select><br><br>
+    
+    <label for="whatsapp">Do you want to receive WhatsApp notifications?</label>
+    <input type="checkbox" id="whatsapp" name="whatsapp"><br><br>
+    
+    <label>Do you like T20?</label>
+    <input type="radio" id="t20_yes" name="t20" value="yes" required>
+    <label for="t20_yes">Yes</label>
+    <input type="radio" id="t20_no" name="t20" value="no">
+    <label for="t20_no">No</label><br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+</center>
+</body>
+</html>
