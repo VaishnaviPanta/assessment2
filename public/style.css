@@ -87,3 +87,17 @@ body {
   animation: bounce 0.5s infinite;
   transform: translate(-50%);
 }
+/* styles.css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
