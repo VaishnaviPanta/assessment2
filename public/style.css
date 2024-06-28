@@ -36,24 +36,29 @@ body {
     display: table;
     clear: both;
   }
-  .responsive-img {
-    width: 100%;
-    height: auto;
-}
+  
 .footer{
   background-color:rosybrown ;
-  text-align: center;
-  width: 100%;
+  position: sticky;
+  margin-top: 70%;
+ 
+}
+.ball-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
 
+}
 
-box {
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(135deg, #ffcc00, #83807e);
+.box {
+  width: 120px;
+  height: 120px;
+  /* background: linear-gradient(135deg, #ffcc00, #83807e); */
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
 }
 
 .ball {
@@ -62,10 +67,11 @@ box {
   background: radial-gradient(circle, #00f260, #0575e6);
   border-radius: 50%;
   position: absolute;
+  left: 50%;
   /* top: calc(50% - 25px);
   /*  */
   
-  left:40%;
+
 }
 
 @keyframes bounce {
@@ -80,5 +86,4 @@ box {
 .box:hover .ball {
   animation: bounce 0.5s infinite;
   transform: translate(-50%);
-}
 }
