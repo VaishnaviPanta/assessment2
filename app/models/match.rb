@@ -1,19 +1,15 @@
-class Match < ApplicationRecord
-    attr_accessor :date, :location, :team1_id, :team2_id, :score_team1, :score_team2
-
-    def initializer(date, location, team1_id, team2_id, score_team1, score_team2)
-        @date = date
-        @location = location
-        @team1_id = team1_id
-        @team2_id = team2_id
-        @score_team1 = score_team1
-        @score_team2 = score_team2
-    end
-    def to_s
-      "date: #{@date} | location: #{@location} | team1_id: #{@team1_id} | team2_id: #{@team2_id} | 
-        score_team1: #{@score_team1} | score_team2: #{@score_team2}"
-    end
-      
-end
 require 'csv'
-data = CSV.read('/home/dispatchtrack/t20/matches.csv')
+class Match < ApplicationRecord
+    def self.populate
+        CSV.foreach("db/matches.csv", headers: true) do |row|
+            match = Match.new
+            match.date = row["date"]
+            match.location = row["location"]
+            match.team1_id = row["team1_id"]
+            match.team2_id = row["team2_id"]
+            match.score_team1 = row["score_team1"]
+            match.score_team2 = row["score_team2"]
+            match.save
+        end
+    end
+end

@@ -1,0 +1,23 @@
+-- create database t20_world_cup;
+-- use t20_world_cup;
+-- create table teams(id int AUTO_INCREMENT,
+--                    name varchar(30) not null unique,
+--                    country varchar(30) not null,
+--                    founded year,
+--                    primary key(id));
+-- Insert into teams(name,country,founded) values
+--    ('Team A', 'USA', 1901),       ('Team B', 'UK', 1958),
+--    ('Team C', 'Spain', 1920),
+--     ('Team D', 'Germany', 1975),
+--     ('Team E', 'Italy', 1905),
+--     ('Team F', 'France', 1945),
+--     ('Team G', 'Brazil', 1910),
+--     ('Team H', 'Argentina', 1913),
+--     ('Team I', 'Mexico', 1922),
+--     ('Team J', 'Netherlands', 1905);
+    -- Select name from teams;
+    -- select * from teams where name="Team E";
+-- select * from teams where founded < '1922';
+-- insert into teams (name,country,founded) values ('Team k', 'srilanka','1950');
+-- update teams set country='Bangladesh' where name='Team G';
+-- delete from teams where name="Bangladesh";                                             
