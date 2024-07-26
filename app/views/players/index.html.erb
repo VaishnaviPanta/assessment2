@@ -1,3 +1,43 @@
+<!-- app/views/players/index.html.erb -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Filter</title>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+</head>
+<body>
+
+<!-- Filter Section -->
+<div>
+    <h2>Search Filters</h2>
+    <form id="filterForm" onsubmit="return filterPlayers()">
+        <label for="teamName">Team Name:</label>
+        <select id="teamName">
+            <option value="">--Select Team--</option>
+            <option value="Team A">Team A</option>
+            <option value="Team B">Team B</option>
+            <option value="Team C">Team C</option>
+            <!-- Add more teams as needed -->
+        </select>
+        
+        <label for="playerName">Player Name:</label>
+        <input type="text" id="playerName" name="playerName">
+        
+        <label for="ageMin">Age Range:</label>
+        <input type="number" id="ageMin" name="ageMin" placeholder="Min Age">
+        <input type="number" id="ageMax" name="ageMax" placeholder="Max Age">
+        
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+
+</body>
+
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -12,7 +52,7 @@
       <tr>
         <td><%= player.name %></td>
         <td><%= player.position %></td>
-        <td><%= player.team %></td>
+        <td><%= player.team_id %></td>
         <td><%= link_to 'Show', player, class: 'btn btn-info' %></td>
         <td><%= link_to 'Edit', edit_player_path(player), class: 'btn btn-warning' %></td>
         <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
@@ -21,3 +61,7 @@
   </tbody>
 </table>
 <%= link_to 'New Player', new_player_path, class: 'btn btn-success' %>
+
+</html>
+
+
