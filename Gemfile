@@ -70,3 +70,6 @@ end
 gem "jquery-rails"
 gem "bootstrap"
 gem "sassc-rails"
+gem 'will_paginate', '~> 3.3'
+gem 'devise'
+gem 'pundit'
