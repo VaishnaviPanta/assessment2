@@ -2,6 +2,7 @@ class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy]
   def index
     @players = Player.all
+    @players = Player.paginate(page: params[:page], per_page: 10)
   end
   def show
   end
