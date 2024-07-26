@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :matches
   get 'teams/index'
   get 'teams/show'
   get 'teams/new'
